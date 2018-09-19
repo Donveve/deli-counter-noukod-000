@@ -1,11 +1,11 @@
 def line(array) # this was the one I figured out
   if array.length >= 1
     nuarray = []
-    counter = 1 
+    counter = 1
     array.each do |name|
       nuarray.push("#{counter}. #{name}")
-      counter += 1 
-    end 
+      counter += 1
+    end
     puts "The line is currently: #{nuarray.join(" ")}"
   else
     puts "The line is currently empty."
@@ -16,15 +16,15 @@ line(katz_deli)
 
 def line_simple(array) # this one follows the same mechanics as learn.co
   current_line = "The simple line is currently:"
-  array.each.with_index(1) do |value, indexemus|  
+  array.each.with_index(1) do |value, indexemus|
   # "each.with_index" is the method...must use "index"
-    current_line << " #{indexemus}. #{value},"    
+    current_line << " #{indexemus}. #{value},"
     # "indexemus" is used to illustrate this variable can be different from "index"
-  end 
+  end
   puts current_line
-end 
-  
-line_simple(katz_deli)  
+end
+
+line_simple(katz_deli)
 #[:foo, :bar, :baz].each.with_index(1) do |value, index|
 #    puts "#{index}: #{value}"
 #end
@@ -32,21 +32,20 @@ line_simple(katz_deli)
 
 
 def take_a_number(line, new_person)
-  line.push(new_person) 
+  line.push(new_person)
   puts "Welcome, #{new_person}. You are number #{line.length} in line."
 end
 
 take_a_number(katz_deli, "Fyvish")
 
 def now_serving(line)
-  if line.length == 0 
+  if line.length == 0
     puts"There is nobody waiting to be served!"
   else
     puts "Currently serving #{line[0]}."
-    line.shift 
+    line.shift
   end
 end
 
 puts now_serving(katz_deli)
 puts katz_deli
-
